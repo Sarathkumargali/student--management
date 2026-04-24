@@ -10,7 +10,7 @@
       <p class="auth-subtitle">Sign in to continue your journey</p>
     </div>
 
-    <form class="auth-form">
+    <form class="auth-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="form-group">
         <label class="form-label" for="email">Email address</label>
         <div class="input-row">

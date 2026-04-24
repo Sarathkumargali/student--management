@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router'; 
-import {  FormControl,FormGroup, Validators } from '@angular/forms'; 
+import { FormControl, FormGroup, Validators } from '@angular/forms'; 
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-signin',
-  imports: [CommonModule, ReactiveFormsModule, CommonModule ],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './signin.html',
   styleUrl: './signin.css',
   standalone: true
@@ -23,10 +23,8 @@ export class Signin {
   onSubmit() {
     this.submitted = true;
     if (this.registrationForm.valid) {
-    
       console.log(this.registrationForm.value);
-      
-    
+      this.router.navigate(['/homepage']);
     }
   } 
 }
